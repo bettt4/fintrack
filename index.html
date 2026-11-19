@@ -20,8 +20,8 @@
 <script>
 // === KONFIGURASI SUPABASE ===
 // Buat project di https://supabase.com, lalu salin Project URL dan anon/public key ke dua konstanta berikut.
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+const SUPABASE_URL = 'https://icvbionlhdpxqfdeqhtc.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_z7g7InWexm7rW2Q70tFeIw_NolnknnP';
 const CATEGORIES={income:['Gaji','Uang saku','Freelance','Bonus','Investasi','Lainnya'],expense:['Makanan','Transportasi','Tempat tinggal','Kuliah','Kesehatan','Belanja','Hiburan','Tagihan','Sosial','Lainnya']};
 const $=id=>document.getElementById(id), rupiah=n=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Number(n)||0), today=()=>new Date().toISOString().slice(0,10), monthNow=()=>today().slice(0,7);
 let sb=null,user=null,transactions=[],budgets=[],authMode='login',flowChart=null,categoryChart=null,cloudReady=false;
